@@ -1,0 +1,53 @@
+
+/Remove-ProvisionedAppxPackage - 从映像中删除应用包(.appx 或 .appxbundle)。                                创建新的用户帐户时，将                            不安装这些应用包。
+/Add-ProvisionedAppxPackage - 将应用包(.appx 或 .appxbundle)添加到映像                                 并将其设置为对每个新用户进行安装。
+/Get-ProvisionedAppxPackages - 显示有关映像中设置为对每个新用户进行                                 安装的应用包                                 (.appx 或 .appxbundle)的信息。
+
+/Remove-Package         - 从映像中删除程序包。
+/Enable-Feature         - 启用映像中的特定功能。
+/Disable-Feature        - 禁用映像中的特定功能。
+/Get-Packages           - 显示有关映像中所有程序包的信息。
+/Get-PackageInfo        - 显示有关特定程序包的信息。
+/Get-Features           - 显示有关程序包中所有功能的信息。
+/Get-FeatureInfo        - 显示有关特定功能的信息。
+/Cleanup-Image          - 对映像执行清理和恢复
+                          操作。
+/Export-Source          - 将一组功能导出到新存储库中。
+/Add-Capability         - 将一个或多个功能添加到图像中。
+/Remove-Capability      - 从一个映像中删除功能。
+/Get-Capabilities       - 获取映像中的功能。
+/Get-CapabilityInfo     - 获取映像中功能的信息。
+/Get-ReservedStorageState - 获取保留存储空间的当前状态。
+/Set-ReservedStorageState - 设置保留存储空间的当前状态。
+
+
+
+驱动程序服务命令:
+
+/Remove-Driver          - 从脱机映像中删除驱动程序包。
+/Add-Driver             - 向脱机映像中添加驱动程序包。
+/Get-DriverInfo         - 显示有关脱机映像中或正在运行的操作系统中的
+                          特定驱动程序的信息。
+/Get-Drivers            - 显示有关脱机映像中或正在运行的操作系统中
+                          的所有驱动程序的信息。
+/Export-Driver          - 从脱机映像或正在运行的操作系统
+                          导出所有第三方驱动程序包。
+
+应用程序服务命令:
+
+/Check-AppPatch         - 显示有关 MSP 修补程序是否适用于安装的映像的信息。
+/Get-AppPatchInfo       - 显示有关安装的 MSP 修补程序的信息。
+/Get-AppPatches         - 显示有关应用于所有安装的应用程序的所有
+                          MSP 修补程序的信息。
+/Get-AppInfo            - 显示有关特定安装的 MSI 应用程序的信息。
+/Get-Apps               - 显示有关安装的所有 MSI 应用程序的信息。
+
+
+
+预配程序包服务命令:
+
+/Get-ProvisioningPackageInfo - 获取预配程序包的信息。
+/Add-ProvisioningPackage - 添加预配程序包。
+
+
+
