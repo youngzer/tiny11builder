@@ -7,8 +7,8 @@ echo Welcome to the tiny11 image creator!
 timeout /t 1 /nobreak
 %CLEAR%
 
-set DriveLetter=F
-::set /p DriveLetter=Please enter the drive letter for the Windows 11 image:
+::set DriveLetter=G
+set /p DriveLetter=Please enter the drive letter for the Windows 11 image:
 set "DriveLetter=%DriveLetter%:"
 echo.
 if not exist "%DriveLetter%\sources\boot.wim" (
@@ -28,7 +28,7 @@ md c:\tiny11
 echo Copying Windows image...
 xcopy.exe /E /I /H /R /Y /J %DriveLetter% c:\tiny11 >log
 echo Copy complete!
-sleep 1
+timeout /t 1 /nobreak
 %CLEAR%
 
 ::dism /image:c:\scratchdir /Cleanup-Image /StartComponentCleanup /ResetBase
@@ -38,8 +38,8 @@ sleep 1
 
 echo Getting image information:
 dism /Get-WimInfo /wimfile:c:\tiny11\sources\install.wim
-set index=1
-::set /p index=Please enter the image index:
+::set index=1
+set /p index=Please enter the image index:
 set "index=%index%"
 echo Mounting Windows image. This may take a while.
 echo.
@@ -125,6 +125,7 @@ call:rm_pap Microsoft.Getstarted
 call:rm_pap Microsoft.MicrosoftOfficeHub
 call:rm_pap Microsoft.MicrosoftSolitaireCollection
 call:rm_pap Microsoft.MicrosoftStickyNotes
+call:rm_pap Microsoft.OutlookForWindows
 call:rm_pap Microsoft.Paint
 call:rm_pap Microsoft.People
 call:rm_pap Microsoft.PowerAutomateDesktop
@@ -132,6 +133,7 @@ call:rm_pap Microsoft.RawImageExtension
 call:rm_pap Microsoft.ScreenSketch
 call:rm_pap Microsoft.SecHealthUI
 call:rm_pap Microsoft.Todos
+call:rm_pap Microsoft.Windows.DevHome
 call:rm_pap Microsoft.WindowsCamera
 call:rm_pap microsoft.windowscommunicationsapps
 call:rm_pap Microsoft.WindowsFeedbackHub
@@ -146,6 +148,7 @@ call:rm_pap Microsoft.ZuneMusic
 call:rm_pap Microsoft.ZuneVideo
 call:rm_pap MicrosoftCorporationII.MicrosoftFamily
 call:rm_pap MicrosoftCorporationII.QuickAssist
+call:rm_pap MicrosoftTeams
 
 call:rm_pkg Microsoft-Windows-Hello-Face
 call:rm_pkg Microsoft-Windows-InternetExplorer-Optional
@@ -180,10 +183,10 @@ call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Athw8x-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Athwnx-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Qcamain10x64-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Ralink-Netr28x-FOD
-call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8187se-FOD
-call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8192se-FOD
-call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl819xp-FOD
-call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl85n64-FOD
+::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8187se-FOD
+::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8192se-FOD
+::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl819xp-FOD
+::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl85n64-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane01-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane13-FOD
