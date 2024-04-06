@@ -114,17 +114,22 @@ dism /image:%img_dir% /Disable-Feature /FeatureName:WorkFolders-Client
 dism /image:%img_dir% /Disable-Feature /FeatureName:Printing-Foundation-Features
 dism /image:%img_dir% /Disable-Feature /FeatureName:Printing-Foundation-InternetPrinting-Client
 
-
 call:rm_pap Clipchamp.Clipchamp
 call:rm_pap Microsoft.549981C3F5F10
+call:rm_pap Microsoft.AV1VideoExtension
+call:rm_pap Microsoft.AVCEncoderVideoExtension
 call:rm_pap Microsoft.BingNews
+call:rm_pap Microsoft.BingSearch
 call:rm_pap Microsoft.BingWeather
 call:rm_pap Microsoft.GamingApp
 call:rm_pap Microsoft.GetHelp
 call:rm_pap Microsoft.Getstarted
+call:rm_pap Microsoft.HEIFImageExtension
+call:rm_pap Microsoft.HEVCVideoExtension
 call:rm_pap Microsoft.MicrosoftOfficeHub
 call:rm_pap Microsoft.MicrosoftSolitaireCollection
 call:rm_pap Microsoft.MicrosoftStickyNotes
+call:rm_pap Microsoft.MPEG2VideoExtension
 call:rm_pap Microsoft.OutlookForWindows
 call:rm_pap Microsoft.Paint
 call:rm_pap Microsoft.People
@@ -133,6 +138,9 @@ call:rm_pap Microsoft.RawImageExtension
 call:rm_pap Microsoft.ScreenSketch
 call:rm_pap Microsoft.SecHealthUI
 call:rm_pap Microsoft.Todos
+call:rm_pap Microsoft.VP9VideoExtensions
+call:rm_pap Microsoft.WebMediaExtensions
+call:rm_pap Microsoft.WebpImageExtension
 call:rm_pap Microsoft.Windows.DevHome
 call:rm_pap Microsoft.WindowsCamera
 call:rm_pap microsoft.windowscommunicationsapps
@@ -148,8 +156,13 @@ call:rm_pap Microsoft.ZuneMusic
 call:rm_pap Microsoft.ZuneVideo
 call:rm_pap MicrosoftCorporationII.MicrosoftFamily
 call:rm_pap MicrosoftCorporationII.QuickAssist
-call:rm_pap MicrosoftTeams
+call:rm_pap MicrosoftWindows.CrossDevice
+call:rm_pap MSTeams
 
+call:rm_pkg Microsoft-Windows-FodMetadata
+call:rm_pkg Microsoft-Windows-FodMetadataServicing-Desktop-CompDB
+call:rm_pkg Microsoft-Windows-FodMetadataServicing-Desktop-Metadata
+call:rm_pkg Microsoft-Windows-Foundation
 call:rm_pkg Microsoft-Windows-Hello-Face
 call:rm_pkg Microsoft-Windows-InternetExplorer-Optional
 call:rm_pkg Microsoft-Windows-Kernel-LA57-FoD
@@ -183,10 +196,6 @@ call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Athw8x-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Athwnx-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Qualcomm-Qcamain10x64-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Ralink-Netr28x-FOD
-::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8187se-FOD
-::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl8192se-FOD
-::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl819xp-FOD
-::call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtl85n64-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane01-FOD
 call:rm_pkg Microsoft-Windows-Wifi-Client-Realtek-Rtwlane13-FOD
